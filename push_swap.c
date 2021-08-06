@@ -75,7 +75,6 @@ int	main(int argc, char **argv)
 	t_data	*result;
 	t_dlist	*nil_a;
 	t_dlist	*nil_b;
-	t_dlist *current;
 	int		len;
 
 	nil_a = init_dlist(0);
@@ -94,12 +93,6 @@ int	main(int argc, char **argv)
 	result->len_a = len;
 	result->len = len;
 	sort_judge(nil_a, nil_b, result, len);
-	current = nil_a->next;
-	while (current != nil_a)
-	{
-		printf("current->value %ld\n", current->value);
-		current = current->next;
-	}
 	free_dlist(nil_a);
 	free_dlist(nil_b);
 	free(result);

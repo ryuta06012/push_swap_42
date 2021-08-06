@@ -40,8 +40,9 @@ t_dlist	*dlist_add(t_dlist *nil, long val)
 	new = (t_dlist *)malloc(sizeof(t_dlist));
 	if (!new)
 		return (NULL);
-	//printf("val = %ld\n", val);
 	new->value = val;
+	new->class = 0;
+	new->index = 0;
 	nil->prev->next = new;
 	new->prev = nil->prev;
 	new->next = nil;
